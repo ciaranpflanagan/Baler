@@ -19,7 +19,7 @@ $price = intval($_SESSION['price']);
 <link rel="stylesheet" href="css/main.css">
 
 	<meta charset="UTF-8">
-	<title>Baler<?php echo $price; ?></title>
+	<title>Baler</title>
 </head>
 <script type="text/javascript">
 

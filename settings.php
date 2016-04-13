@@ -1,5 +1,5 @@
 <?php 
-include '../config/init.php';
+session_start();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -38,18 +38,9 @@ include '../config/init.php';
 <?php 
 if ($_SERVER['REQUEST_METHOD'] == "POST") {
 
-    // Intizalising Errors Array
-    $errors = array();
+    $_SESSION['price'] = $_POST['price'];
 
-    // Checking for a price
-    if (empty($_POST['price'])) {
-        $errors[] = 'You forgot to enter a price!';
-    }
-    else
-    {
-        $price = mysqli_real_escape_string($dbc, trim($_POST['price']));
-    }
-
+/*
 // If everything is ok
 if (empty($errors)) {  
     // Making the query
@@ -84,7 +75,7 @@ else
     }
     echo '</p><p>Please try again. Thank You.</p><p><br/></p>';
 } // End of (empty($errors)) if statement
-}
+*/}
 ?>
 </body>
 </html>

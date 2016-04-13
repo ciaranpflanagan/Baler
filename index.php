@@ -1,8 +1,6 @@
 <?php 
-include '../config/init.php';
-
-// Getting Price Var
-include 'codes/price.php';
+session_start();
+$price = intval($_SESSION['price']);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -21,9 +19,10 @@ include 'codes/price.php';
 <link rel="stylesheet" href="css/main.css">
 
 	<meta charset="UTF-8">
-	<title>Baler</title>
+	<title>Baler<?php echo $price; ?></title>
 </head>
 <script type="text/javascript">
+
     // Setting Variables
     var clicks = 0;
     var total = 0;
@@ -65,8 +64,7 @@ include 'codes/price.php';
             <div class="counting-buttons"><button type="button" onClick="count()" class="counting-button btn btn-default">Bale Out</button><button type="button" onClick="finish()" class="counting-button btn btn-default">Finish</button><button type="button" onClick="reset()" class="counting-button btn btn-default">Reset</button></div>
         </div>
         <div class="settings">
-            <a href="settings.php">Settings</a> |
-            <a href="../index.php">Farm Recorder Home</a>
+            <a href="settings.php">Settings</a>
         </div>
       </div>
     </div>
